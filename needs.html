@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bedarfe | BW Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+    </div>
+</nav>
+
+    <main class="max-w-6xl mx-auto p-8">
+        <div class="mb-10">
+            <h1 class="text-4xl font-black text-slate-900">Offene Bedarfe</h1>
+            <p class="text-slate-500">Wo drückt der Schuh? Finde Probleme, für die du eine Lösung entwickeln kannst.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-2xl mb-8 flex flex-wrap gap-4 items-center">
+            <input type="text" class="flex-1 bg-transparent px-4 py-2 border-r border-slate-200 outline-none" placeholder="Nach Bereich suchen (z.B. Logistik)...">
+            <div class="flex gap-2">
+                <span class="px-3 py-1 bg-blue-600 text-white rounded-lg text-xs font-bold cursor-pointer">Alle</span>
+                <span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-lg text-xs font-bold hover:bg-slate-200 cursor-pointer transition">Dringend</span>
+                <span class="px-3 py-1 bg-slate-100 text-slate-500 rounded-lg text-xs font-bold hover:bg-slate-200 cursor-pointer transition">IT-Sicherheit</span>
+            </div>
+        </div>
+
+        <div class="grid gap-6">
+            <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group">
+                <div class="bg-orange-100 text-orange-600 p-6 rounded-2xl font-black text-2xl">!</div>
+                <div class="flex-1">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-[10px] font-black uppercase text-slate-400 tracking-widest">Eingestellt von PzBtl 203</span>
+                        <span class="text-xs font-bold text-orange-600">Priorität: Hoch</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition">Ersatzteil-Tracking im Feld</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Bei Verlegung fehlt oft die Übersicht, welcher Container welche Bauteile enthält. Wir brauchen eine einfache Lösung ohne große Hardware-Infrastruktur.</p>
+                    <div class="flex gap-3">
+                        <button class="btn-primary text-white px-6 py-2 rounded-xl text-xs font-bold">Lösung vorschlagen</button>
+                        <button class="px-6 py-2 border border-slate-200 rounded-xl text-xs font-bold hover:bg-slate-50 transition">Unterstützen (12)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-start group">
+                <div class="bg-blue-100 text-blue-600 p-6 rounded-2xl font-black text-2xl">?</div>
+                <div class="flex-1">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-[10px] font-black uppercase text-slate-400 tracking-widest">Eingestellt von SanStff</span>
+                        <span class="text-xs font-bold text-blue-600">Priorität: Mittel</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition">Digitale Patientenakte (Offline)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Synchronisation von Patientendaten nach Einsätzen ohne stabile Netzabdeckung.</p>
+                    <div class="flex gap-3">
+                        <button class="btn-primary text-white px-6 py-2 rounded-xl text-xs font-bold">Lösung vorschlagen</button>
+                        <button class="px-6 py-2 border border-slate-200 rounded-xl text-xs font-bold hover:bg-slate-50 transition">Unterstützen (8)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

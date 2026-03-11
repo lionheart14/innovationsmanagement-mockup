@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sicherheit | BW Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+    </div>
+</nav>
+
+    <main class="max-w-4xl mx-auto p-8">
+        <h1 class="text-3xl font-black mb-8 text-slate-800">Sicherheit & Administration</h1>
+
+        <div class="grid gap-6">
+            <div class="glass-card p-6 rounded-2xl">
+                <h3 class="font-bold text-lg mb-4">Datenklassifizierung</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                        <div>
+                            <p class="font-bold text-sm">Standard-Sicherheitsstufe</p>
+                            <p class="text-xs text-slate-500">Festlegen der Standardfreigabe für neue Beiträge.</p>
+                        </div>
+                        <select class="bg-white border rounded-lg px-3 py-2 text-sm font-bold outline-none">
+                            <option>Offen</option>
+                            <option selected>VS-NfD</option>
+                            <option>Vertraulich</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <h3 class="font-bold text-lg mb-4">Zugriffssteuerung</h3>
+                <div class="space-y-4">
+                    <label class="flex items-center justify-between p-4 bg-slate-50 rounded-xl cursor-pointer">
+                        <div>
+                            <p class="font-bold text-sm">Zwei-Faktor-Authentisierung (2FA)</p>
+                            <p class="text-xs text-slate-500">Erzwingen des Logins via Smartcard/PKI.</p>
+                        </div>
+                        <input type="checkbox" checked class="w-5 h-5">
+                    </label>
+                    <label class="flex items-center justify-between p-4 bg-slate-50 rounded-xl cursor-pointer">
+                        <div>
+                            <p class="font-bold text-sm">Intranet-Only Modus</p>
+                            <p class="text-xs text-slate-500">Zugriff nur aus dem Bundeswehr-Kernnetz erlauben.</p>
+                        </div>
+                        <input type="checkbox" class="w-5 h-5">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Lösungen | BW Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+    </div>
+</nav>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-8">
+        <div class="mb-10">
+            <h1 class="text-4xl font-black text-slate-900">Lösungs-Katalog</h1>
+            <p class="text-slate-500">Vorhandene Technologien und erprobte Prototypen zur Weiternutzung.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card rounded-3xl overflow-hidden group">
+                <div class="h-40 bg-slate-200 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded">PROTOTYP LIVE</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Smart-Scan Logistik</h3>
+                    <p class="text-xs text-slate-500 mb-4">Mobile App zur automatisierten Inventur via Kamera-Scan.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Android</span>
+                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Offline-First</span>
+                    </div>
+                    <button class="w-full py-3 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-slate-800 transition">Details ansehen</button>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-3xl overflow-hidden group">
+                <div class="h-40 bg-slate-200 relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded">IN ENTWICKLUNG</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Drone-Detection AI</h3>
+                    <p class="text-xs text-slate-500 mb-4">KI-Modell zur akustischen Erkennung von Kleindrohnen.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Python</span>
+                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Edge-Computing</span>
+                    </div>
+                    <button class="w-full py-3 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-slate-800 transition">Details ansehen</button>
+                </div>
+            </div>
+            
+            <div class="border-2 border-dashed border-slate-200 rounded-3xl flex items-center justify-center p-8 text-center">
+                <div>
+                    <p class="text-slate-400 font-bold text-sm mb-2">Deine Lösung hier?</p>
+                    <button onclick="location.href='submit-idea.html'" class="text-blue-600 font-black text-xs uppercase underline">Jetzt einreichen</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

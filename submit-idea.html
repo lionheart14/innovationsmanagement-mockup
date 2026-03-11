@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Idee einreichen | BW Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+            <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+            <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+            <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+            <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto p-8">
+        <div class="glass-card p-10 rounded-3xl">
+            <h1 class="text-3xl font-black text-slate-800 mb-2">Innovation einreichen</h1>
+            <p class="text-slate-500 mb-10 text-sm">Fülle die Felder kurz und prägnant aus. Dauer: ca. 3 Minuten.</p>
+            
+            <form class="space-y-6">
+                <div class="space-y-2">
+                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">Arbeitstitel der Idee</label>
+                    <input type="text" class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" placeholder="z.B. Digitaler Materialbegleitschein">
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">1. Welches Problem lösen wir? (Need Information)</label>
+                    <textarea class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" rows="2" placeholder="Beschreibe den Schmerzpunkt im Dienstalltag..."></textarea>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">2. Wer profitiert davon? (Zielgruppe)</label>
+                    <input type="text" class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" placeholder="z.B. Instandsetzungstrupp, S4-Offiziere...">
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">3. Lösungsvorschlag (Solution Information)</label>
+                    <textarea class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" rows="2" placeholder="Wie sieht deine technische oder organisatorische Lösung aus?"></textarea>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">Sicherheitsklassifizierung</label>
+                    <select class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 outline-none focus:border-blue-500">
+                        <option>Offen / Unklassifiziert</option>
+                        <option>VS-Nur für den Dienstgebrauch (VS-NfD)</option>
+                        <option disabled>VS-Vertraulich (nur via SiN)</option>
+                    </select>
+                </div>
+
+                <div class="flex gap-4 pt-6">
+                    <button type="button" onclick="location.href='feed.html'" class="flex-1 py-4 border-2 border-slate-200 rounded-2xl font-bold text-slate-500 hover:bg-slate-100 transition">Abbrechen</button>
+                    <button id="submitBtn" type="button" onclick="submitWithCheck()" class="flex-1 py-4 btn-primary text-white rounded-2xl font-bold shadow-xl">Auf Duplikate prüfen & Einreichen</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function submitWithCheck() {
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "Prüfe Datenbank...";
+            btn.disabled = true;
+            btn.style.opacity = "0.5";
+
+            setTimeout(() => {
+                alert("✅ Check abgeschlossen: Keine Duplikate gefunden. Dein Projekt wurde angelegt!");
+                location.href='project.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

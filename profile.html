@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil | BW Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+    <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+    </div>
+</nav>
+
+    <main class="max-w-4xl mx-auto p-8">
+        <div class="glass-card rounded-3xl overflow-hidden">
+            <div class="h-48 bg-gradient-to-r from-blue-900 to-slate-900 flex items-center justify-center">
+                <div class="w-32 h-32 rounded-full border-4 border-white bg-slate-300 -mb-24 shadow-2xl flex items-center justify-center text-4xl font-black text-white">LM</div>
+            </div>
+            <div class="pt-20 px-10 pb-10 text-center">
+                <h1 class="text-3xl font-black text-slate-800">Leon Mustermann</h1>
+                <p class="text-slate-500 font-medium">Kamerad & Innovator | IT-Bataillon 292</p>
+                
+                <div class="mt-8 grid grid-cols-3 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-2xl">
+                        <div class="text-2xl font-black text-blue-600">1.250</div>
+                        <div class="text-xs text-slate-400 uppercase font-bold">Punkte</div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl">
+                        <div class="text-2xl font-black text-blue-600">#3</div>
+                        <div class="text-xs text-slate-400 uppercase font-bold">Rang</div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl">
+                        <div class="text-2xl font-black text-blue-600">8</div>
+                        <div class="text-xs text-slate-400 uppercase font-bold">Badges</div>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-left">
+                    <h3 class="font-bold text-slate-800 mb-4">Deine Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Python</span>
+                        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Feldlogistik</span>
+                        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Rapid Prototyping</span>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-left">
+                    <h3 class="font-bold text-slate-800 mb-4">Passende Matches für dich</h3>
+                    <div class="p-4 border-2 border-dashed border-blue-200 rounded-2xl bg-blue-50">
+                        <p class="text-sm text-blue-800">Basiert auf deinen Skills: <strong>3 Probleme</strong> suchen aktuell einen Experten für Python.</p>
+                        <button class="mt-2 text-sm font-black text-blue-700 underline">Jetzt ansehen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
