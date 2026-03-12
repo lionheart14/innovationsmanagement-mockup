@@ -2,109 +2,30 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Zentrale | BW Connect</title>
+    <title>Login | BW Innovation Connect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50">
-    <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
-    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
-        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
-        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
-        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
-        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
-        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+<body class="bg-slate-900 flex items-center justify-center h-screen">
+    <div class="max-w-md w-full p-8 glass-card rounded-3xl">
+        <div class="text-center mb-10">
+            <div class="text-3xl font-black text-slate-800 tracking-tighter">BW <span class="text-blue-600">CONNECT</span></div>
+            <p class="text-slate-500 text-sm mt-2">Innovationsplattform der Bundeswehr</p>
+        </div>
+
+        <div class="space-y-4">
+            <button onclick="location.href='feed.html'" class="w-full py-4 btn-primary text-white rounded-xl font-bold flex items-center justify-center gap-3">
+                <span>Login via Intranet / PKI</span>
+            </button>
+            
+            <button onclick="location.href='feed.html'" class="w-full py-4 border-2 border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition">
+                Smartcard Login
+            </button>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 text-center">
+            <p class="text-xs text-slate-400">Hybrider Zugriff für Dienststelle und Home-Office aktiviert.</p>
+        </div>
     </div>
-</nav>
-
-    <main class="max-w-7xl mx-auto p-8 grid grid-cols-12 gap-8">
-        
-        <div class="col-span-12 md:col-span-8 space-y-6">
-            <div class="flex justify-between items-center mb-6">
-                <div>
-                    <h2 class="text-3xl font-black text-slate-800">Innovations-Feed</h2>
-                    <p class="text-slate-500 text-sm">Was passiert gerade in der Truppe?</p>
-                </div>
-                <button onclick="location.href='submit-idea.html'" class="btn-primary text-white px-8 py-3 rounded-2xl font-bold shadow-xl">
-                    + Neue Idee
-                </button>
-            </div>
-
-            <div class="flex gap-4 mb-8">
-                <button class="px-6 py-2 bg-slate-200 rounded-xl text-xs font-bold shadow-sm">Alle Beiträge</button>
-                <button onclick="location.href='needs.html'" class="px-6 py-2 bg-white hover:bg-orange-50 border border-slate-200 rounded-xl text-xs font-bold text-orange-600 transition shadow-sm">
-                    Bedarfe suchen (Needs)
-                </button>
-                <button onclick="location.href='solutions.html'" class="px-6 py-2 bg-white hover:bg-green-50 border border-slate-200 rounded-xl text-xs font-bold text-green-600 transition shadow-sm">
-                    Lösungen finden (Solutions)
-                </button>
-            </div>
-
-            <div class="space-y-6">
-                <div class="glass-card p-6 rounded-3xl border-l-8 border-orange-500">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-[10px] font-black bg-orange-100 text-orange-600 px-2 py-1 rounded">DRINGENDER BEDARF</span>
-                        <span class="text-xs text-slate-400 italic">Sanitätsdienst | vor 2 Std.</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Offline-Karten für Feldlager</h3>
-                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                        Die Navigation in Funklöchern ist aktuell kritisch. Wir suchen eine Lösung für lokales Caching auf Dienst-Tablets.
-                    </p>
-                    <div class="flex items-center justify-between border-t pt-4">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 rounded-full bg-slate-200"></div>
-                            <span class="text-xs font-bold text-slate-500">Hptm. Müller + 14 weitere</span>
-                        </div>
-                        <button onclick="location.href='needs.html'" class="text-blue-600 font-black text-xs uppercase tracking-tighter">Details & Helfen</button>
-                    </div>
-                </div>
-
-                <div class="glass-card p-6 rounded-3xl border-l-8 border-green-500">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-[10px] font-black bg-green-100 text-green-600 px-2 py-1 rounded">NEUE LÖSUNG</span>
-                        <span class="text-xs text-slate-400 italic">Logistikzentrum | vor 5 Std.</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">KI-Dienstplaner Alpha v1.2</h3>
-                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                        Erster erfolgreicher Testlauf der automatisierten Dienstplanung. Reduziert den Verwaltungsaufwand um ca. 40%.
-                    </p>
-                    <div class="flex justify-between items-center border-t pt-4">
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">Inkubator</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">Python</span>
-                        </div>
-                        <button onclick="location.href='solutions.html'" class="text-blue-600 font-black text-xs uppercase tracking-tighter">Zum Katalog</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-span-12 md:col-span-4 space-y-6">
-            <div class="glass-card p-6 rounded-3xl bg-slate-900 text-white border-none">
-                <h3 class="text-xs font-black text-blue-400 uppercase tracking-widest mb-4">Tech-Radar</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-400">GenAI</span>
-                        <span class="text-orange-400 font-bold">Peak of Expectations</span>
-                    </div>
-                    <div class="w-full h-1 bg-slate-800 rounded-full"><div class="w-[80%] h-full bg-blue-500 rounded-full"></div></div>
-                </div>
-            </div>
-
-            <div class="glass-card p-6 rounded-3xl">
-                <h3 class="font-bold text-slate-800 mb-4">Dein Innovation Score</h3>
-                <div class="flex items-center justify-between mb-4">
-                    <span class="text-3xl font-black text-blue-600">850</span>
-                    <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded font-bold uppercase text-center">Rank #3 <br> Btl 292</span>
-                </div>
-                <div class="w-full h-2 bg-slate-100 rounded-full"><div class="w-[85%] h-full bg-blue-600 rounded-full"></div></div>
-            </div>
-
-            <div class="p-6 border-2 border-dashed border-slate-200 rounded-3xl text-center">
-                <button onclick="location.href='admin-security.html'" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-bold transition">Sicherheits-Center</button>
-            </div>
-        </div>
-    </main>
 </body>
 </html>
