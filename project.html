@@ -33,7 +33,7 @@
                 <h1 class="text-4xl font-black text-slate-900 mb-2">Projekt: Drohnen-Abwehr-Schild</h1>
                 <p class="text-slate-500 font-medium italic">Status: Peer-Review abgeschlossen</p>
             </div>
-            <div id="status-chip" class="px-6 py-2 bg-blue-100 text-blue-700 rounded-full font-black text-sm uppercase tracking-wider">
+            <div id="status-chip" class="px-6 py-2 bg-blue-100 text-blue-800 rounded-full font-black text-sm uppercase tracking-wider border border-blue-200 shadow-sm">
                 Phase: Coaching
             </div>
         </div>
@@ -48,56 +48,123 @@
 
         <div class="grid grid-cols-12 gap-8">
             <div class="col-span-12 md:col-span-8 space-y-6">
+                <div class="glass-card p-8 rounded-3xl border-l-8 border-blue-500 bg-white">
+                    <h2 class="text-xl font-black mb-4">Stage-Gate Checkliste: Coaching Phase</h2>
+                    <p class="text-sm text-slate-600 mb-6">Erfülle diese Kriterien, um das automatische Provisionieren der Entwicklungsressourcen für das Prototyping freizuschalten.</p>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" checked disabled>
+                            <span class="text-sm font-bold text-slate-700 line-through">Markt- und Bedarfsanalyse abgeschlossen</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" id="check-sec" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" onchange="checkProgress()">
+                            <span class="text-sm font-bold text-slate-700">Sicherheitsanforderungen (IT-SiBe) geklärt</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" id="check-budget" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" onchange="checkProgress()">
+                            <span class="text-sm font-bold text-slate-700">Budget und Ressourcen für MVP gesichert</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl border-l-8 border-slate-300 bg-white">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-black">Aktuelle Phase: Coaching & Evaluierung</h2>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="location.href='coaching.html'" class="p-4 border-2 border-blue-100 bg-blue-50 hover:bg-blue-100 rounded-2xl flex flex-col items-start gap-2 transition text-left">
+                            <span class="text-xs font-black text-blue-600 uppercase">Aktion erforderlich</span>
+                            <span class="text-sm font-bold text-slate-800">Coaching-Workspace öffnen</span>
+                            <span class="text-[10px] text-slate-500">Termine, Methodik & Mentoren-Chat</span>
+                        </button>
+                        <button onclick="location.href='feedback.html'" class="p-4 border-2 border-slate-200 bg-slate-50 hover:bg-slate-100 rounded-2xl flex flex-col items-start gap-2 transition text-left">
+                            <span class="text-xs font-black text-slate-400 uppercase">Abgeschlossen</span>
+                            <span class="text-sm font-bold text-slate-800">Peer-Feedback ansehen</span>
+                            <span class="text-[10px] text-slate-500">Ergebnisse aus der vorherigen Phase</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="glass-card p-8 rounded-3xl">
-                    <h2 class="text-xl font-black mb-6">Workspaces & Schnittstellen</h2>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <div class="p-6 border-2 border-green-100 bg-green-50 rounded-2xl flex flex-col items-center gap-3 hover:scale-105 transition cursor-pointer">
-                            <span class="text-3xl">💬</span>
-                            <span class="text-xs font-bold text-green-700">BwMessenger</span>
+                    <h2 class="text-xl font-black mb-6">Workspaces und Schnittstellen</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                        <div class="p-6 border-2 border-green-200 bg-green-50 rounded-2xl flex flex-col items-center gap-2 hover:shadow-md transition cursor-pointer">
+                            <span class="text-xs font-black text-green-700 uppercase">Aktiv</span>
+                            <span class="text-sm font-bold text-slate-800">BwMessenger</span>
                         </div>
-                        <div class="p-6 border-2 border-slate-100 rounded-2xl flex flex-col items-center gap-3 hover:border-blue-500 transition cursor-pointer">
-                            <span class="text-3xl">☁️</span>
-                            <span class="text-xs font-bold">Nextcloud</span>
+                        <div class="p-6 border-2 border-slate-200 rounded-2xl flex flex-col items-center gap-2 hover:border-blue-400 hover:shadow-md transition cursor-pointer">
+                            <span class="text-xs font-black text-slate-400 uppercase">Aktiv</span>
+                            <span class="text-sm font-bold text-slate-800">Nextcloud</span>
                         </div>
-                        <div id="tool-gitlab" class="tool-locked p-6 border-2 border-slate-100 rounded-2xl flex flex-col items-center gap-3 transition relative overflow-hidden">
-                            <span class="text-3xl">🦊</span>
-                            <span class="text-xs font-bold">GitLab Repo</span>
-                            <span id="lock-label" class="text-[8px] bg-slate-200 px-2 py-0.5 rounded uppercase font-black mt-2">Gesperrt</span>
+                        <div id="tool-gitlab" class="tool-locked p-6 border-2 border-slate-200 bg-slate-50 rounded-2xl flex flex-col items-center gap-2 transition relative overflow-hidden">
+                            <span id="lock-label" class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded uppercase font-black">Gesperrt</span>
+                            <span class="text-sm font-bold text-slate-800">GitLab Repo</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-span-12 md:col-span-4">
-                <div class="p-6 border-2 border-dashed border-slate-300 rounded-3xl bg-white shadow-xl">
-                    <h3 class="text-xs font-black text-slate-400 uppercase mb-4 text-center">Live-Simulation</h3>
-                    <button onclick="unlockGitLab()" class="w-full py-4 bg-blue-700 text-white rounded-2xl font-black text-xs hover:bg-blue-800 transition shadow-lg">
-                        Phase auf 'Prototyping' setzen
+                <div class="p-6 border-2 border-dashed border-slate-300 rounded-3xl bg-white shadow-xl sticky top-24">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xs font-black text-slate-400 uppercase">Live-Simulation</h3>
+                        <span class="bg-red-100 text-red-700 text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider">Admin Only</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-6 font-medium">In der realen Anwendung wird dieser Schritt nach Prüfung der Stage-Gate Kriterien durch das <strong>Innovation Board (Admin)</strong> ausgelöst.</p>
+                    
+                    <button id="unlock-btn" onclick="unlockGitLab()" class="w-full py-4 bg-slate-300 text-slate-500 rounded-2xl font-black text-xs transition shadow-none cursor-not-allowed" disabled>
+                        Schließe Checkliste ab
                     </button>
-                    <p class="text-[10px] text-slate-400 mt-4 text-center">Simuliert das automatische Provisionieren von Dev-Ressourcen nach erfolgreichem Coaching.</p>
+                    <p class="text-[10px] text-slate-400 mt-4 text-center">Simuliert für diesen Mockup das automatische Provisionieren von Dev-Ressourcen nach Freigabe.</p>
                 </div>
             </div>
         </div>
     </main>
 
     <script>
+        function checkProgress() {
+            const sec = document.getElementById('check-sec').checked;
+            const budget = document.getElementById('check-budget').checked;
+            const btn = document.getElementById('unlock-btn');
+
+            if(sec && budget) {
+                btn.disabled = false;
+                btn.classList.replace('bg-slate-300', 'bg-blue-700');
+                btn.classList.replace('text-slate-500', 'text-white');
+                btn.classList.add('shadow-lg', 'hover:bg-blue-800');
+                btn.classList.remove('cursor-not-allowed');
+                btn.innerText = "Phase als Admin freigeben";
+            } else {
+                btn.disabled = true;
+                btn.classList.replace('bg-blue-700', 'bg-slate-300');
+                btn.classList.replace('text-white', 'text-slate-500');
+                btn.classList.remove('shadow-lg', 'hover:bg-blue-800');
+                btn.classList.add('cursor-not-allowed');
+                btn.innerText = "Schließe Checkliste ab";
+            }
+        }
+
         function unlockGitLab() {
             const chip = document.getElementById('status-chip');
             chip.innerText = "Phase: Prototyping";
             chip.classList.replace('bg-blue-100', 'bg-green-100');
-            chip.classList.replace('text-blue-700', 'text-green-700');
+            chip.classList.replace('text-blue-800', 'text-green-800');
+            chip.classList.replace('border-blue-200', 'border-green-300');
 
             document.getElementById('step-coaching').classList.replace('active', 'done');
             document.getElementById('step-proto').classList.add('active');
 
             const gitlab = document.getElementById('tool-gitlab');
-            gitlab.classList.remove('tool-locked');
+            gitlab.classList.remove('tool-locked', 'bg-slate-50');
+            gitlab.classList.add('border-green-300', 'bg-green-50');
+            
             const label = document.getElementById('lock-label');
             label.innerText = "Provisioniert";
-            label.classList.replace('bg-slate-200', 'bg-green-100');
-            label.classList.add('text-green-600');
+            label.classList.replace('bg-slate-200', 'bg-green-600');
+            label.classList.replace('text-slate-600', 'text-white');
             
-            alert("🚀 Automatische Freischaltung: Das GitLab-Repository wurde für dein Team erstellt.");
+            document.getElementById('unlock-btn').style.display = 'none';
         }
     </script>
 </body>

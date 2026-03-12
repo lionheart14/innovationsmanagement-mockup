@@ -8,54 +8,64 @@
 </head>
 <body class="bg-slate-50">
     <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
-    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
-        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
-        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
-        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
-        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
-        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
-    </div>
-</nav>
+        <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+            <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+            <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+            <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+            <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+        </div>
+    </nav>
 
-    <main class="max-w-4xl mx-auto p-8">
+    <main class="max-w-4xl mx-auto p-8 relative">
+        
+        <div class="absolute inset-0 z-10 bg-slate-50/70 backdrop-blur-[2px] rounded-3xl flex flex-col items-center justify-center p-8 mt-20">
+            <div class="bg-white p-8 rounded-3xl shadow-2xl border border-red-100 text-center max-w-sm">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🔒</div>
+                <h2 class="text-xl font-black text-slate-900 mb-2">Zugriff verweigert</h2>
+                <p class="text-sm text-slate-600 font-medium mb-6">Dieser Bereich ist nur für Plattform-Administratoren und IT-Sicherheitsbeauftragte zugänglich.</p>
+                <button onclick="location.href='feed.html'" class="w-full py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition">
+                    Zurück zum Dashboard
+                </button>
+            </div>
+        </div>
+
         <h1 class="text-3xl font-black mb-8 text-slate-800">Sicherheit & Administration</h1>
 
-        <div class="grid gap-6">
-            <div class="glass-card p-6 rounded-2xl">
-                <h3 class="font-bold text-lg mb-4">Datenklassifizierung</h3>
+        <div class="grid gap-6 opacity-40 pointer-events-none select-none filter grayscale">
+            <div class="glass-card p-6 rounded-3xl bg-white border border-slate-200">
+                <h3 class="font-bold text-lg mb-4 text-slate-800">Datenklassifizierung</h3>
                 <div class="space-y-4">
-                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                    <div class="flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                         <div>
-                            <p class="font-bold text-sm">Standard-Sicherheitsstufe</p>
-                            <p class="text-xs text-slate-500">Festlegen der Standardfreigabe für neue Beiträge.</p>
+                            <p class="font-bold text-sm text-slate-700">Standard-Sicherheitsstufe</p>
+                            <p class="text-xs text-slate-500 mt-1">Festlegen der Standardfreigabe für neue Beiträge.</p>
                         </div>
-                        <select class="bg-white border rounded-lg px-3 py-2 text-sm font-bold outline-none">
-                            <option>Offen</option>
+                        <select class="bg-white border border-slate-200 rounded-xl px-4 py-2 text-sm font-bold text-slate-600 outline-none" disabled>
                             <option selected>VS-NfD</option>
-                            <option>Vertraulich</option>
                         </select>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl">
-                <h3 class="font-bold text-lg mb-4">Zugriffssteuerung</h3>
-                <div class="space-y-4">
-                    <label class="flex items-center justify-between p-4 bg-slate-50 rounded-xl cursor-pointer">
+            <div class="glass-card p-6 rounded-3xl bg-white border border-slate-200">
+                <h3 class="font-bold text-lg mb-4 text-slate-800">Zugriffssteuerung</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                         <div>
-                            <p class="font-bold text-sm">Zwei-Faktor-Authentisierung (2FA)</p>
-                            <p class="text-xs text-slate-500">Erzwingen des Logins via Smartcard/PKI.</p>
+                            <p class="font-bold text-sm text-slate-700">Zwei-Faktor-Authentisierung (2FA)</p>
+                            <p class="text-xs text-slate-500 mt-1">Erzwingen des Logins via Smartcard/PKI.</p>
                         </div>
-                        <input type="checkbox" checked class="w-5 h-5">
-                    </label>
-                    <label class="flex items-center justify-between p-4 bg-slate-50 rounded-xl cursor-pointer">
+                        <input type="checkbox" checked disabled class="w-5 h-5 rounded text-blue-600">
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-slate-50 border border-slate-100 rounded-2xl">
                         <div>
-                            <p class="font-bold text-sm">Intranet-Only Modus</p>
-                            <p class="text-xs text-slate-500">Zugriff nur aus dem Bundeswehr-Kernnetz erlauben.</p>
+                            <p class="font-bold text-sm text-slate-700">Intranet-Only Modus</p>
+                            <p class="text-xs text-slate-500 mt-1">Zugriff nur aus dem Bundeswehr-Kernnetz erlauben.</p>
                         </div>
-                        <input type="checkbox" class="w-5 h-5">
-                    </label>
+                        <input type="checkbox" disabled class="w-5 h-5 rounded text-blue-600">
+                    </div>
                 </div>
             </div>
         </div>

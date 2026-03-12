@@ -2,63 +2,121 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Profil | BW Connect</title>
+    <title>Profil & Management | BW Connect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50">
     <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
-    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
-        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
-        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
-        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
-        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
-        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
-    </div>
-</nav>
+        <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+            <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+            <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+            <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+            <a href="profile.html" class="text-blue-400 border-b-2 border-blue-400 pb-1">Profil</a>
+        </div>
+    </nav>
 
-    <main class="max-w-4xl mx-auto p-8">
-        <div class="glass-card rounded-3xl overflow-hidden">
-            <div class="h-48 bg-gradient-to-r from-blue-900 to-slate-900 flex items-center justify-center">
-                <div class="w-32 h-32 rounded-full border-4 border-white bg-slate-300 -mb-24 shadow-2xl flex items-center justify-center text-4xl font-black text-white">LM</div>
+    <main class="max-w-7xl mx-auto p-8 grid grid-cols-12 gap-8">
+        
+        <div class="col-span-12 md:col-span-4 space-y-6">
+            <div class="glass-card rounded-3xl overflow-hidden bg-white border border-slate-200">
+                <div class="h-32 bg-gradient-to-r from-blue-900 to-slate-900 flex items-center justify-center relative">
+                    <div class="absolute -bottom-12 w-24 h-24 rounded-full border-4 border-white bg-slate-300 shadow-lg flex items-center justify-center text-3xl font-black text-white">
+                        MM
+                    </div>
+                </div>
+                <div class="pt-16 px-8 pb-8 text-center">
+                    <h1 class="text-2xl font-black text-slate-800">Max Mustermann</h1>
+                    <p class="text-sm text-slate-500 font-medium mb-2">Innovation Manager (Admin)</p>
+                    <p class="text-xs text-slate-400 italic mb-6">IT-Bataillon 292</p>
+                    
+                    <div class="grid grid-cols-3 gap-3 mb-8">
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-xl font-black text-blue-600">1.250</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Punkte</div>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-xl font-black text-blue-600">#3</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Rang</div>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-xl font-black text-blue-600">8</div>
+                            <div class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Badges</div>
+                        </div>
+                    </div>
+
+                    <div class="text-left mb-8">
+                        <h3 class="font-bold text-slate-800 text-sm mb-3">Deine Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold border border-blue-200">Python</span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold border border-blue-200">Feldlogistik</span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold border border-blue-200">Prototyping</span>
+                        </div>
+                    </div>
+
+                    <div class="text-left">
+                        <h3 class="font-bold text-slate-800 text-sm mb-3">Skill-Matching</h3>
+                        <div class="p-4 border-2 border-dashed border-blue-200 rounded-2xl bg-blue-50">
+                            <p class="text-xs text-blue-800 leading-relaxed">Basiert auf deinen Skills: <strong>3 Teams</strong> suchen aktuell einen Experten für Python & Prototyping.</p>
+                            <button onclick="location.href='needs.html'" class="mt-3 text-xs font-black text-blue-700 uppercase tracking-wide hover:text-blue-900 transition">Projekte ansehen →</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="pt-20 px-10 pb-10 text-center">
-                <h1 class="text-3xl font-black text-slate-800">Leon Mustermann</h1>
-                <p class="text-slate-500 font-medium">Kamerad & Innovator | IT-Bataillon 292</p>
+        </div>
+
+        <div class="col-span-12 md:col-span-8 space-y-6">
+            
+            <div class="glass-card p-8 rounded-3xl bg-slate-900 text-white border-none shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
                 
-                <div class="mt-8 grid grid-cols-3 gap-4">
-                    <div class="p-4 bg-slate-50 rounded-2xl">
-                        <div class="text-2xl font-black text-blue-600">1.250</div>
-                        <div class="text-xs text-slate-400 uppercase font-bold">Punkte</div>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-2xl">
-                        <div class="text-2xl font-black text-blue-600">#3</div>
-                        <div class="text-xs text-slate-400 uppercase font-bold">Rang</div>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-2xl">
-                        <div class="text-2xl font-black text-blue-600">8</div>
-                        <div class="text-xs text-slate-400 uppercase font-bold">Badges</div>
-                    </div>
+                <div class="flex items-center gap-3 mb-6 relative z-10">
+                    <span class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider">Admin Bereich</span>
+                    <h2 class="text-xl font-black">Portfolio-Steuerung</h2>
                 </div>
-
-                <div class="mt-10 text-left">
-                    <h3 class="font-bold text-slate-800 mb-4">Deine Skills</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Python</span>
-                        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Feldlogistik</span>
-                        <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">Rapid Prototyping</span>
-                    </div>
+                <p class="text-slate-400 text-sm mb-8 relative z-10">Tools zur Bewertung, Steuerung und Analyse aller laufenden Innovationsvorhaben. Nur für freigeschaltete Manager sichtbar.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
+                    <button onclick="location.href='funnel.html'" class="p-6 bg-slate-800 hover:bg-slate-700 rounded-2xl border border-slate-700 transition flex flex-col gap-3 text-left group">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-lg group-hover:bg-blue-500 transition">⚡</div>
+                        <span class="text-sm font-bold text-white">Innovation Funnel (Kanban)</span>
+                        <span class="text-xs text-slate-400">Verwalte Stage-Gates und Projektphasen der Truppe.</span>
+                    </button>
+                    <button onclick="location.href='analytics.html'" class="p-6 bg-slate-800 hover:bg-slate-700 rounded-2xl border border-slate-700 transition flex flex-col gap-3 text-left group">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-lg group-hover:bg-blue-500 transition">📈</div>
+                        <span class="text-sm font-bold text-white">Portfolio Analytics</span>
+                        <span class="text-xs text-slate-400">Erfolge, Budgets, TRL-Verteilung und ROI Metriken.</span>
+                    </button>
                 </div>
+            </div>
 
-                <div class="mt-10 text-left">
-                    <h3 class="font-bold text-slate-800 mb-4">Passende Matches für dich</h3>
-                    <div class="p-4 border-2 border-dashed border-blue-200 rounded-2xl bg-blue-50">
-                        <p class="text-sm text-blue-800">Basiert auf deinen Skills: <strong>3 Probleme</strong> suchen aktuell einen Experten für Python.</p>
-                        <button class="mt-2 text-sm font-black text-blue-700 underline">Jetzt ansehen</button>
+            <div class="glass-card p-8 rounded-3xl border border-slate-200 bg-white shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-black text-slate-800">Deine aktiven Projekte</h2>
+                    <button onclick="location.href='submit-idea.html'" class="text-xs font-black text-blue-600 uppercase tracking-wider hover:text-blue-800">+ Neue Idee</button>
+                </div>
+                
+                <div class="space-y-3">
+                    <div onclick="location.href='project.html'" class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex justify-between items-center hover:bg-blue-50 hover:border-blue-200 cursor-pointer transition group">
+                        <div>
+                            <h3 class="font-bold text-sm text-slate-800 group-hover:text-blue-700 transition">Drohnen-Abwehr-Schild</h3>
+                            <p class="text-xs text-slate-500 mt-1">Rolle: Ideengeber & Entwickler</p>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded uppercase tracking-wider border border-blue-200">Phase: Coaching</span>
+                    </div>
+                    
+                    <div onclick="location.href='project.html'" class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex justify-between items-center hover:bg-blue-50 hover:border-blue-200 cursor-pointer transition group">
+                        <div>
+                            <h3 class="font-bold text-sm text-slate-800 group-hover:text-blue-700 transition">Logistik-Scanner (MVP)</h3>
+                            <p class="text-xs text-slate-500 mt-1">Rolle: Mentor / Berater</p>
+                        </div>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase tracking-wider border border-green-200">Phase: Rollout</span>
                     </div>
                 </div>
             </div>
+            
         </div>
     </main>
 </body>

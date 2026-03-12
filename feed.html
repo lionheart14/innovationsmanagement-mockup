@@ -8,15 +8,15 @@
 </head>
 <body class="bg-slate-50">
     <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
-    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
-        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
-        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
-        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
-        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
-        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
-    </div>
-</nav>
+        <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="feed.html" class="text-blue-400 border-b-2 border-blue-400 pb-1">Dashboard</a>
+            <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+            <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+            <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+            <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+        </div>
+    </nav>
 
     <main class="max-w-7xl mx-auto p-8 grid grid-cols-12 gap-8">
         
@@ -32,12 +32,15 @@
             </div>
 
             <div class="flex gap-4 mb-8">
-                <button class="px-6 py-2 bg-slate-200 rounded-xl text-xs font-bold shadow-sm">Alle Beiträge</button>
+                <button class="px-6 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold shadow-sm">Alle Beiträge</button>
                 <button onclick="location.href='needs.html'" class="px-6 py-2 bg-white hover:bg-orange-50 border border-slate-200 rounded-xl text-xs font-bold text-orange-600 transition shadow-sm">
                     Bedarfe suchen (Needs)
                 </button>
                 <button onclick="location.href='solutions.html'" class="px-6 py-2 bg-white hover:bg-green-50 border border-slate-200 rounded-xl text-xs font-bold text-green-600 transition shadow-sm">
                     Lösungen finden (Solutions)
+                </button>
+                <button onclick="location.href='market.html'" class="px-6 py-2 bg-white hover:bg-purple-50 border border-slate-200 rounded-xl text-xs font-bold text-purple-600 transition shadow-sm ml-auto flex items-center gap-2">
+                    Externe Trends & Market Scout
                 </button>
             </div>
 
@@ -53,56 +56,73 @@
                     </p>
                     <div class="flex items-center justify-between border-t pt-4">
                         <div class="flex items-center gap-2">
-                            <div class="w-6 h-6 rounded-full bg-slate-200"></div>
+                            <div class="w-8 h-8 rounded-full bg-slate-300 border-2 border-white shadow"></div>
                             <span class="text-xs font-bold text-slate-500">Hptm. Müller + 14 weitere</span>
                         </div>
-                        <button onclick="location.href='needs.html'" class="text-blue-600 font-black text-xs uppercase tracking-tighter">Details & Helfen</button>
+                        <button onclick="location.href='needs.html'" class="text-blue-600 font-black text-xs uppercase tracking-tighter hover:text-blue-800 transition">Details & Helfen</button>
                     </div>
                 </div>
 
                 <div class="glass-card p-6 rounded-3xl border-l-8 border-green-500">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="text-[10px] font-black bg-green-100 text-green-600 px-2 py-1 rounded">NEUE LÖSUNG</span>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-black bg-green-100 text-green-600 px-2 py-1 rounded">NEUE LÖSUNG</span>
+                            <span class="text-[10px] font-black bg-slate-200 text-slate-600 px-2 py-1 rounded border border-slate-300">TRL 4</span>
+                        </div>
                         <span class="text-xs text-slate-400 italic">Logistikzentrum | vor 5 Std.</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">KI-Dienstplaner Alpha v1.2</h3>
                     <p class="text-slate-600 text-sm mb-4 leading-relaxed">
-                        Erster erfolgreicher Testlauf der automatisierten Dienstplanung. Reduziert den Verwaltungsaufwand um ca. 40%.
+                        Erster erfolgreicher Testlauf der automatisierten Dienstplanung. Reduziert den Verwaltungsaufwand signifikant.
                     </p>
                     <div class="flex justify-between items-center border-t pt-4">
                         <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">Inkubator</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">Python</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-500 text-[10px] font-bold rounded border border-slate-200">Inkubator</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-500 text-[10px] font-bold rounded border border-slate-200">Python</span>
                         </div>
-                        <button onclick="location.href='solutions.html'" class="text-blue-600 font-black text-xs uppercase tracking-tighter">Zum Katalog</button>
+                        <button onclick="location.href='solutions.html'" class="text-blue-600 font-black text-xs uppercase tracking-tighter hover:text-blue-800 transition">Zum Katalog</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-span-12 md:col-span-4 space-y-6">
-            <div class="glass-card p-6 rounded-3xl bg-slate-900 text-white border-none">
+            <div class="glass-card p-6 rounded-3xl bg-slate-900 text-white border-none shadow-2xl">
                 <h3 class="text-xs font-black text-blue-400 uppercase tracking-widest mb-4">Tech-Radar</h3>
                 <div class="space-y-4">
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-400">GenAI</span>
-                        <span class="text-orange-400 font-bold">Peak of Expectations</span>
-                    </div>
-                    <div class="w-full h-1 bg-slate-800 rounded-full"><div class="w-[80%] h-full bg-blue-500 rounded-full"></div></div>
+                    <a href="solutions.html?tag=genai" class="block group cursor-pointer">
+                        <div class="flex justify-between items-center text-xs mb-1">
+                            <span class="text-slate-300 group-hover:text-white transition">GenAI</span>
+                            <span class="text-orange-400 font-bold text-[10px] uppercase">Peak of Expectations</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden"><div class="w-[80%] h-full bg-blue-500 rounded-full group-hover:bg-blue-400 transition"></div></div>
+                    </a>
+                    <a href="solutions.html?tag=drohnen" class="block group cursor-pointer">
+                        <div class="flex justify-between items-center text-xs mb-1">
+                            <span class="text-slate-300 group-hover:text-white transition">Drohnen-Abwehr</span>
+                            <span class="text-green-400 font-bold text-[10px] uppercase">Plateau of Productivity</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden"><div class="w-[95%] h-full bg-green-500 rounded-full group-hover:bg-green-400 transition"></div></div>
+                    </a>
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-3xl">
-                <h3 class="font-bold text-slate-800 mb-4">Dein Innovation Score</h3>
+            <div class="glass-card p-6 rounded-3xl border-2 border-blue-100 bg-gradient-to-br from-white to-blue-50">
+                <h3 class="font-bold text-slate-800 mb-2">Dein Innovation Score</h3>
                 <div class="flex items-center justify-between mb-4">
-                    <span class="text-3xl font-black text-blue-600">850</span>
-                    <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded font-bold uppercase text-center">Rank #3 <br> Btl 292</span>
+                    <span class="text-4xl font-black text-blue-700">850</span>
+                    <div class="text-[10px] bg-blue-600 text-white px-3 py-1.5 rounded-lg font-bold uppercase text-center shadow-md">
+                        Rank #3 <br> Btl 292
+                    </div>
                 </div>
-                <div class="w-full h-2 bg-slate-100 rounded-full"><div class="w-[85%] h-full bg-blue-600 rounded-full"></div></div>
+                <div class="w-full h-2 bg-blue-200 rounded-full overflow-hidden"><div class="w-[85%] h-full bg-blue-600 rounded-full"></div></div>
+                <p class="text-[10px] text-slate-500 mt-3 font-medium">Noch 150 Punkte bis zum Status "Innovation Lead".</p>
             </div>
 
-            <div class="p-6 border-2 border-dashed border-slate-200 rounded-3xl text-center">
-                <button onclick="location.href='admin-security.html'" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-xs font-bold transition">Sicherheits-Center</button>
+            <div class="p-6 border-2 border-dashed border-slate-300 rounded-3xl text-center bg-white">
+                <button onclick="location.href='admin-security.html'" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition shadow-sm">
+                    Sicherheits-Center aufrufen
+                </button>
             </div>
         </div>
     </main>

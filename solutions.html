@@ -8,60 +8,75 @@
 </head>
 <body class="bg-slate-50">
     <nav class="bg-slate-900 text-white px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
-    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
-        <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
-        <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
-        <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
-        <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
-        <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
-    </div>
-</nav>
+        <div class="text-xl font-black">BW <span class="text-blue-400">CONNECT</span></div>
+        <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="feed.html" class="hover:text-blue-400 transition">Dashboard</a>
+            <a href="project.html" class="hover:text-blue-400 transition">Projekte</a>
+            <a href="roadmap.html" class="hover:text-blue-400 transition">Roadmap</a>
+            <a href="rewards.html" class="hover:text-blue-400 transition">Rewards</a>
+            <a href="profile.html" class="hover:text-blue-400 transition">Profil</a>
+        </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto p-8">
-        <div class="mb-10">
-            <h1 class="text-4xl font-black text-slate-900">Lösungs-Katalog</h1>
-            <p class="text-slate-500">Vorhandene Technologien und erprobte Prototypen zur Weiternutzung.</p>
+    <main class="max-w-7xl mx-auto p-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+            <div>
+                <h1 class="text-4xl font-black text-slate-900 mb-2">Lösungs-Katalog</h1>
+                <p class="text-slate-500 font-medium">Vorhandene Technologien und erprobte Prototypen zur Weiternutzung.</p>
+            </div>
+            <button onclick="location.href='submit-idea.html'" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold text-sm shadow-lg hover:bg-slate-800 transition">
+                + Eigene Lösung teilen
+            </button>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-8 p-4 bg-white border border-slate-200 rounded-2xl shadow-sm">
+            <span class="px-4 py-2 text-xs font-black text-slate-400 uppercase tracking-widest flex items-center">Filter:</span>
+            <button class="px-4 py-2 bg-slate-800 text-white rounded-lg text-xs font-bold">Alle</button>
+            <button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-lg text-xs font-bold transition">TRL 1-3 (Konzept)</button>
+            <button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-lg text-xs font-bold transition">TRL 4-6 (Prototyp)</button>
+            <button class="px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-lg text-xs font-bold transition">TRL 7-9 (Einsatzbereit)</button>
+            <select class="ml-auto bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-xs font-bold outline-none text-slate-600">
+                <option>Neueste zuerst</option>
+                <option>Höchste Bewertung</option>
+            </select>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card rounded-3xl overflow-hidden group">
+            <div class="glass-card rounded-3xl overflow-hidden group bg-white border border-slate-200 hover:border-blue-300 transition-all">
                 <div class="h-40 bg-slate-200 relative">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
-                    <span class="absolute bottom-4 left-4 bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded">PROTOTYP LIVE</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 flex gap-2">
+                        <span class="bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider shadow">Prototyp Live</span>
+                        <span class="bg-slate-800 text-white text-[10px] font-black px-2 py-1 rounded shadow">TRL 6</span>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-bold text-lg mb-2">Smart-Scan Logistik</h3>
-                    <p class="text-xs text-slate-500 mb-4">Mobile App zur automatisierten Inventur via Kamera-Scan.</p>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Smart-Scan Logistik</h3>
+                    <p class="text-sm text-slate-600 mb-6 line-clamp-2">Mobile App zur automatisierten Inventur via Kamera-Scan. Reduziert Fehlerquoten um 30%.</p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Android</span>
-                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Offline-First</span>
+                        <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded border border-slate-200">Android</span>
+                        <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded border border-slate-200">Offline-First</span>
                     </div>
-                    <button class="w-full py-3 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-slate-800 transition">Details ansehen</button>
+                    <button class="w-full py-3 bg-slate-50 border border-slate-200 text-slate-700 rounded-xl font-bold text-sm hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition">Details ansehen</button>
                 </div>
             </div>
 
-            <div class="glass-card rounded-3xl overflow-hidden group">
+            <div class="glass-card rounded-3xl overflow-hidden group bg-white border border-slate-200 hover:border-blue-300 transition-all">
                 <div class="h-40 bg-slate-200 relative">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
-                    <span class="absolute bottom-4 left-4 bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded">IN ENTWICKLUNG</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 flex gap-2">
+                        <span class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider shadow">In Entwicklung</span>
+                        <span class="bg-slate-800 text-white text-[10px] font-black px-2 py-1 rounded shadow">TRL 3</span>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="font-bold text-lg mb-2">Drone-Detection AI</h3>
-                    <p class="text-xs text-slate-500 mb-4">KI-Modell zur akustischen Erkennung von Kleindrohnen.</p>
+                    <h3 class="font-bold text-lg mb-2 text-slate-800">Drone-Detection AI</h3>
+                    <p class="text-sm text-slate-600 mb-6 line-clamp-2">KI-Modell zur akustischen Erkennung von Kleindrohnen. Aktuell im Proof of Concept.</p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Python</span>
-                        <span class="text-[9px] font-bold bg-slate-100 px-2 py-1 rounded">Edge-Computing</span>
+                        <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded border border-slate-200">Python</span>
+                        <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded border border-slate-200">Edge-Computing</span>
                     </div>
-                    <button class="w-full py-3 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-slate-800 transition">Details ansehen</button>
-                </div>
-            </div>
-            
-            <div class="border-2 border-dashed border-slate-200 rounded-3xl flex items-center justify-center p-8 text-center">
-                <div>
-                    <p class="text-slate-400 font-bold text-sm mb-2">Deine Lösung hier?</p>
-                    <button onclick="location.href='submit-idea.html'" class="text-blue-600 font-black text-xs uppercase underline">Jetzt einreichen</button>
+                    <button class="w-full py-3 bg-slate-50 border border-slate-200 text-slate-700 rounded-xl font-bold text-sm hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition">Details ansehen</button>
                 </div>
             </div>
         </div>

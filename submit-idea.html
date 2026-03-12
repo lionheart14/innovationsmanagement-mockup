@@ -19,34 +19,40 @@
     </nav>
 
     <main class="max-w-3xl mx-auto p-8">
-        <div class="glass-card p-10 rounded-3xl">
+        <div class="glass-card p-10 rounded-3xl shadow-xl bg-white">
             <h1 class="text-3xl font-black text-slate-800 mb-2">Innovation einreichen</h1>
-            <p class="text-slate-500 mb-10 text-sm">Fülle die Felder kurz und prägnant aus. Dauer: ca. 3 Minuten.</p>
+            <p class="text-slate-500 mb-10 text-sm font-medium">Fülle die Felder kurz und prägnant aus. Dauer: ca. 3 Minuten.</p>
             
             <form class="space-y-6">
                 <div class="space-y-2">
-                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">Arbeitstitel der Idee</label>
-                    <input type="text" class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" placeholder="z.B. Digitaler Materialbegleitschein">
+                    <label class="block text-xs font-black text-slate-700 uppercase tracking-widest">Arbeitstitel der Idee</label>
+                    <input type="text" class="w-full border-2 border-slate-200 p-4 rounded-xl bg-slate-50 focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium" placeholder="z.B. Digitaler Materialbegleitschein">
                 </div>
 
                 <div class="space-y-2">
-                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">1. Welches Problem lösen wir? (Need Information)</label>
-                    <textarea class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" rows="2" placeholder="Beschreibe den Schmerzpunkt im Dienstalltag..."></textarea>
+                    <label class="block text-xs font-black text-slate-700 uppercase tracking-widest">1. Welches Problem lösen wir? (Need)</label>
+                    <textarea class="w-full border-2 border-slate-200 p-4 rounded-xl bg-slate-50 focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium" rows="3" placeholder="Beschreibe den Schmerzpunkt im Dienstalltag..."></textarea>
                 </div>
 
                 <div class="space-y-2">
-                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">2. Wer profitiert davon? (Zielgruppe)</label>
-                    <input type="text" class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" placeholder="z.B. Instandsetzungstrupp, S4-Offiziere...">
+                    <label class="block text-xs font-black text-slate-700 uppercase tracking-widest">2. Wer profitiert davon? (Zielgruppe)</label>
+                    <input type="text" class="w-full border-2 border-slate-200 p-4 rounded-xl bg-slate-50 focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium" placeholder="z.B. Instandsetzungstrupp, S4-Offiziere...">
                 </div>
 
                 <div class="space-y-2">
-                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">3. Lösungsvorschlag (Solution Information)</label>
-                    <textarea class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all" rows="2" placeholder="Wie sieht deine technische oder organisatorische Lösung aus?"></textarea>
+                    <label class="block text-xs font-black text-slate-700 uppercase tracking-widest">3. Lösungsvorschlag (Solution)</label>
+                    <textarea class="w-full border-2 border-slate-200 p-4 rounded-xl bg-slate-50 focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium" rows="3" placeholder="Wie sieht deine technische oder organisatorische Lösung aus?"></textarea>
+                </div>
+
+                <div class="space-y-2 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                    <label class="block text-xs font-black text-blue-800 uppercase tracking-widest">4. Benötigte Ressourcen (Optional)</label>
+                    <p class="text-xs text-blue-600 mb-3">Suchst du noch Teammitglieder oder spezifisches Fachwissen zur Umsetzung?</p>
+                    <input type="text" class="w-full border-2 border-white p-4 rounded-xl bg-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium" placeholder="z.B. Suche Python-Entwickler oder Logistik-Experten...">
                 </div>
 
                 <div class="space-y-2">
-                    <label class="block text-sm font-black text-slate-700 uppercase tracking-wider">Sicherheitsklassifizierung</label>
-                    <select class="w-full border-2 border-slate-100 p-4 rounded-2xl bg-slate-50 outline-none focus:border-blue-500">
+                    <label class="block text-xs font-black text-slate-700 uppercase tracking-widest">Sicherheitsklassifizierung</label>
+                    <select class="w-full border-2 border-slate-200 p-4 rounded-xl bg-slate-50 outline-none focus:border-blue-500 font-bold text-slate-700">
                         <option>Offen / Unklassifiziert</option>
                         <option>VS-Nur für den Dienstgebrauch (VS-NfD)</option>
                         <option disabled>VS-Vertraulich (nur via SiN)</option>
@@ -54,8 +60,8 @@
                 </div>
 
                 <div class="flex gap-4 pt-6">
-                    <button type="button" onclick="location.href='feed.html'" class="flex-1 py-4 border-2 border-slate-200 rounded-2xl font-bold text-slate-500 hover:bg-slate-100 transition">Abbrechen</button>
-                    <button id="submitBtn" type="button" onclick="submitWithCheck()" class="flex-1 py-4 btn-primary text-white rounded-2xl font-bold shadow-xl">Auf Duplikate prüfen & Einreichen</button>
+                    <button type="button" onclick="location.href='index.html'" class="flex-1 py-4 border-2 border-slate-200 rounded-xl font-bold text-slate-600 hover:bg-slate-50 transition">Abbrechen</button>
+                    <button id="submitBtn" type="button" onclick="submitWithCheck()" class="flex-1 py-4 btn-primary text-white rounded-xl font-bold shadow-xl">Auf Duplikate prüfen und Einreichen</button>
                 </div>
             </form>
         </div>
@@ -66,10 +72,10 @@
             const btn = document.getElementById('submitBtn');
             btn.innerText = "Prüfe Datenbank...";
             btn.disabled = true;
-            btn.style.opacity = "0.5";
+            btn.classList.add('opacity-50');
 
             setTimeout(() => {
-                alert("✅ Check abgeschlossen: Keine Duplikate gefunden. Dein Projekt wurde angelegt!");
+                alert("Check abgeschlossen: Keine Duplikate gefunden. Dein Projekt wurde angelegt!");
                 location.href='project.html';
             }, 1500);
         }
