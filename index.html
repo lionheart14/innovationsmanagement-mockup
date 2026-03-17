@@ -12,6 +12,8 @@
             border: 1px solid rgba(226, 232, 240, 0.8);
         }
         .bento-inner { background: rgba(248, 250, 252, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); }
+        /* Animation für den Vote-Button */
+        .vote-btn:active { transform: scale(0.9); }
     </style>
 </head>
 <body class="bg-[#f8fafc] font-sans text-slate-900">
@@ -23,7 +25,7 @@
             </div>
             <div class="relative hidden lg:block">
                 <input type="text" placeholder="Suche nach Skills, Projekten oder Personen..." 
-                       class="bg-slate-800 border-none rounded-xl py-2 px-10 text-sm w-96 focus:ring-2 focus:ring-blue-400 outline-none">
+                       class="bg-slate-800 border-none rounded-xl py-2 px-10 text-sm w-96 focus:ring-2 focus:ring-blue-400 outline-none transition-all">
                 <svg class="w-4 h-4 absolute left-3 top-2.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
         </div>
@@ -39,7 +41,7 @@
                 <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900"></span>
             </button>
             <button onclick="location.href='submit-idea.html'" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-lg transition-all">
-            + Idee / Problem einreichen
+                + Idee / Problem einreichen
             </button>
         </div>
     </nav>
@@ -55,7 +57,6 @@
                         <div class="absolute -left-[5px] top-0 w-2 h-2 bg-blue-500 rounded-full"></div>
                         <h4 class="text-xs font-black text-slate-800 uppercase">Smart-MRE Logistik</h4>
                         <p class="text-[9px] text-blue-600 font-bold mt-1">Phase: Validierung</p>
-                        
                         <div class="flex gap-1 mt-3">
                             <div class="h-1 flex-1 rounded-full bg-blue-600"></div>
                             <div class="h-1 flex-1 rounded-full bg-blue-600 animate-pulse"></div>
@@ -83,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="p-6 rounded-[2.5rem] bg-white border border-slate-100">
+            <div class="p-6 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm">
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Lokale Spark Cells</h3>
                 <div class="space-y-3">
                     <div class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 cursor-pointer transition">
@@ -106,43 +107,57 @@
                 </div>
             </div>
 
-            <div class="glass-card p-8 rounded-[2.5rem] border-l-[12px] border-orange-500 shadow-sm hover:shadow-md transition group cursor-pointer">
+            <div class="glass-card p-8 rounded-[2.5rem] border-l-[12px] border-orange-500 shadow-sm hover:shadow-md transition group relative">
                 <div class="flex justify-between items-start mb-6">
                     <div class="flex gap-2">
                         <span class="bg-orange-100 text-orange-600 text-[9px] font-black px-2 py-1 rounded uppercase tracking-tighter">Dringender Bedarf</span>
                         <span class="bg-slate-100 text-slate-500 text-[9px] font-black px-2 py-1 rounded uppercase tracking-tighter">Sanitätsdienst</span>
                     </div>
-                    <span class="text-[10px] text-slate-400 font-bold italic">vor 2 Std.</span>
+                    
+                    <div class="flex flex-col items-center bg-white/50 border border-slate-200 rounded-2xl p-1.5 shadow-sm">
+                        <button class="vote-btn text-slate-400 hover:text-blue-600 transition duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
+                        </button>
+                        <span class="text-xs font-black text-slate-700">142</span>
+                        <button class="vote-btn text-slate-400 hover:text-red-500 transition duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                        </button>
+                    </div>
                 </div>
+
                 <h3 class="text-xl font-black text-slate-800 mb-3 group-hover:text-blue-600 transition">Offline-Karten für Feldlager</h3>
-                <p class="text-sm text-slate-500 leading-relaxed mb-6">
-                    Die Navigation in Funklöchern ist kritisch. Wir suchen eine Lösung für lokales Caching auf Dienst-Tablets. Skill-Match: <span class="font-bold text-slate-700">Python & Prototyping</span>.
-                </p>
+                <p class="text-sm text-slate-500 leading-relaxed mb-6">Die Navigation in Funklöchern ist kritisch. Wir suchen eine Lösung für lokales Caching auf Dienst-Tablets. Skill-Match: <span class="font-bold text-slate-700">Python & Prototyping</span>.</p>
                 <div class="flex items-center justify-between pt-6 border-t border-slate-100">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white shadow-sm"></div>
-                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-tighter">Hptm. Müller + 14</span>
+                        <span class="text-[10px] font-black text-slate-400 uppercase">Hptm. Müller + 14</span>
                     </div>
                     <button class="text-blue-600 text-[10px] font-black uppercase tracking-[0.15em] hover:underline">Details & Helfen →</button>
                 </div>
             </div>
 
-            <div class="glass-card p-8 rounded-[2.5rem] border-l-[12px] border-green-500 shadow-sm hover:shadow-md transition group cursor-pointer">
+            <div class="glass-card p-8 rounded-[2.5rem] border-l-[12px] border-green-500 shadow-sm hover:shadow-md transition group relative">
                 <div class="flex justify-between items-start mb-6">
                     <div class="flex gap-2">
                         <span class="bg-green-100 text-green-600 text-[9px] font-black px-2 py-1 rounded uppercase tracking-tighter">Neue Lösung</span>
                         <span class="bg-slate-900 text-white text-[9px] font-black px-2 py-1 rounded uppercase tracking-tighter">TRL 4</span>
                     </div>
-                    <span class="text-[10px] text-slate-400 font-bold italic">vor 5 Std.</span>
+
+                    <div class="flex flex-col items-center bg-white/50 border border-slate-200 rounded-2xl p-1.5 shadow-sm">
+                        <button class="vote-btn text-slate-400 hover:text-blue-600 transition duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
+                        </button>
+                        <span class="text-xs font-black text-slate-700">89</span>
+                        <button class="vote-btn text-slate-400 hover:text-red-500 transition duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                        </button>
+                    </div>
                 </div>
                 <h3 class="text-xl font-black text-slate-800 mb-3 group-hover:text-blue-600 transition">KI-Dienstplaner Alpha</h3>
-                <p class="text-sm text-slate-500 leading-relaxed mb-6">
-                    Erster Testlauf der automatisierten Planung. Reduziert Verwaltungsaufwand signifikant. Programmiert in <span class="font-bold text-slate-700">Python</span>.
-                </p>
+                <p class="text-sm text-slate-500 leading-relaxed mb-6">Erster Testlauf der automatisierten Planung. Reduziert Verwaltungsaufwand signifikant.</p>
                 <div class="flex items-center justify-between pt-6 border-t border-slate-100">
-                    <div class="flex gap-2 text-[8px] font-black uppercase tracking-widest text-slate-400">
-                        <span class="bg-slate-100 px-2 py-0.5 rounded">Inkubator</span>
-                        <span class="bg-slate-100 px-2 py-0.5 rounded">Logistik</span>
+                    <div class="flex gap-2">
+                        <span class="bg-slate-100 text-slate-500 text-[8px] font-black px-2 py-1 rounded uppercase">Inkubator</span>
                     </div>
                     <button class="text-blue-600 text-[10px] font-black uppercase tracking-[0.15em] hover:underline">Lösung testen →</button>
                 </div>
@@ -151,20 +166,14 @@
             <div class="mt-12 pt-6">
                 <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-6">Aktuelle Challenges</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-[2rem] text-white shadow-lg shadow-orange-200 group cursor-pointer overflow-hidden relative">
-                        <div class="relative z-10">
-                            <span class="text-[8px] font-black bg-white/20 px-2 py-1 rounded">PRIORITÄT A</span>
-                            <h4 class="text-lg font-black mt-2 leading-tight">Software Defined Defence</h4>
-                            <p class="text-[10px] opacity-80 mt-1 uppercase font-bold tracking-widest">CIHBw Aufruf</p>
-                        </div>
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-[2rem] text-white shadow-lg relative overflow-hidden group cursor-pointer">
+                        <h4 class="text-lg font-black leading-tight">Software Defined Defence</h4>
+                        <p class="text-[10px] opacity-80 mt-1 uppercase font-bold tracking-widest">CIHBw Aufruf</p>
                         <span class="absolute -right-4 -bottom-4 text-7xl opacity-10 group-hover:scale-110 transition">⚡</span>
                     </div>
-                    <div class="bg-slate-800 p-6 rounded-[2rem] text-white shadow-lg cursor-pointer hover:bg-slate-700 transition relative overflow-hidden group">
-                        <div class="relative z-10">
-                            <span class="text-[8px] font-black bg-blue-500 px-2 py-1 rounded uppercase tracking-tighter">Spark Cell Call</span>
-                            <h4 class="text-lg font-black mt-2 leading-tight">Feld-Energie 2026</h4>
-                            <p class="text-[10px] opacity-80 mt-1 uppercase font-bold tracking-widest">Offener Wettbewerb</p>
-                        </div>
+                    <div class="bg-slate-800 p-6 rounded-[2rem] text-white shadow-lg relative overflow-hidden group cursor-pointer">
+                        <h4 class="text-lg font-black leading-tight">Feld-Energie 2026</h4>
+                        <p class="text-[10px] opacity-80 mt-1 uppercase font-bold tracking-widest">Spark Cell Call</p>
                         <span class="absolute -right-4 -bottom-4 text-7xl opacity-10 group-hover:scale-110 transition">🔋</span>
                     </div>
                 </div>
