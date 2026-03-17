@@ -21,28 +21,28 @@
 
     <nav class="bg-slate-900 text-white px-8 py-3 flex justify-between items-center sticky top-0 z-50 shadow-lg">
         <div class="flex items-center gap-8">
-            <div class="text-xl font-black tracking-tighter cursor-pointer" onclick="location.href='feed.html'">
+            <div class="text-xl font-black tracking-tighter cursor-pointer" onclick="location.href='index.html'">
                 BW <span class="text-blue-400">CONNECT</span>
             </div>
             <div class="relative hidden lg:block">
                 <input type="text" placeholder="Suche nach Skills, Projekten oder Personen..." 
-                       class="bg-slate-800 border-none rounded-xl py-2 px-10 text-sm w-96 focus:ring-2 focus:ring-blue-400 outline-none transition-all">
-                <svg class="w-4 h-4 absolute left-3 top-2.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                       class="bg-slate-800 border-none rounded-xl py-2 px-10 text-sm w-96 focus:ring-2 focus:ring-blue-400 outline-none">
+                <svg class="w-4 h-4 absolute left-3 top-2.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
         </div>
         <div class="flex items-center gap-6">
-            <div class="flex gap-6 text-[10px] font-bold uppercase tracking-[0.15em] border-r border-slate-700 pr-6 mr-2">
+            <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest border-r border-slate-700 pr-6 mr-2">
                 <a href="index.html" class="hover:text-blue-400 transition">Dashboard</a>
                 <a href="#" class="hover:text-blue-400 transition">Marktplatz</a>
-                <a href="#" class="hover:text-blue-400 transition">Roadmap</a>
+                <a href="#" class="hover:text-blue-400 transition">Netzwerk</a>
                 <a href="profile.html" class="text-blue-400 border-b-2 border-blue-400 pb-1">Profil</a>
             </div>
             <button class="relative p-2 hover:bg-slate-800 rounded-full transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-                <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-slate-900"></span>
+                <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900"></span>
             </button>
-            <button class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-lg transition-all">
-                + Neue Idee
+            <button onclick="location.href='submit-idea.html'" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-lg transition-all">
+            + Neue Idee einreichen
             </button>
         </div>
     </nav>
